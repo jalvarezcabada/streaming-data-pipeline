@@ -1,0 +1,18 @@
+{
+    "name": "debezium-postgres",
+    "config": {
+      "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+      "tasks.max": "1",
+      "database.hostname": "postgres",
+      "database.port": "5432",
+      "database.user": "postgres",
+      "database.password": "postgres",
+      "database.dbname": "postgres",
+      "topic.prefix": "debezium",
+      "signal.data_collection": "public.debezium_signal",
+      "signal.enabled.channels": "source,kafka",
+      "signal.kafka.topic": "signal-topic",
+      "signal.kafka.bootstrap.servers": "kafka:9092",
+      "plugin.name": "pgoutput"
+    }
+}
